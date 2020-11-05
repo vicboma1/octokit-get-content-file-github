@@ -7,6 +7,7 @@ octokit.repos.getContent({
     repo: 'octokit-get-content-file-github',
     path: 'README.md'
 }).then(result => {
+      console.log(result.data.content)
       const content = Buffer.from(result.data.content, 'base64').toString()
       console.log(content)
 }).catch( ex => {
